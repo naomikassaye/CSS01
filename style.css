@@ -1,0 +1,300 @@
+
+body {
+    background-color: #f0f6fc;
+    color: #2b3d52;
+    line-height: 1.6;
+}
+
+/* NAVIGATION  */
+nav {
+    position: sticky;
+    top: 0;
+    background: #ccdbf6;
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 1.5rem;
+    z-index: 10;
+    width: 100%;
+    justify-content: space-evenly;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #305b8c;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    background-color: #9eb3d8;
+    border-color: #5b8ecf;
+    border-radius: 5px;
+}
+
+/* HERO SECTION  */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(to right, #e3f0ff, #ffffff);
+    flex-wrap: wrap;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.hero img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* HERO CONTENT  */
+.content {
+    z-index: 1;
+    flex: 1;
+    max-width: 600px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.content p {
+    margin-bottom: 1rem;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.content button {
+    padding: 0.5rem 1rem;
+    background-color: #5b8ecf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.content button:hover {
+    background-color: #426da9;
+}
+
+/* TEAM SECTION  */
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 2em;
+    background-color: #eaf3fb;
+    text-align: center;
+}
+
+.team > h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2b3d52;
+}
+
+.team > h3 {
+    color: #2b3d52;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.card1, .card2, .card3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.card1 img,
+.card2 img,
+.card3 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.team p {
+    font-size: 0.95rem;
+    color: #5c738d;
+    margin-bottom: 0.8em;
+}
+
+.team .socialmed li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.team div:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.team div::before {
+    content: "\2605";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: gold;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+a[href^="mailto"] {
+    color: purple;
+    text-decoration: underline;
+}
+
+/*PRICING SECTION  */
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #e4eef8;
+    flex-wrap: wrap;
+}
+
+.price h2 {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.plan1,
+.plan2,
+.plan3 {
+    position: relative;
+    background-color: #f9f9f9;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1rem;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.plan1 {
+    box-sizing: content-box;
+}
+
+.plan2,
+.plan3 {
+    box-sizing: border-box;
+}
+
+.plan1::before,
+.plan2::before,
+.plan3::before {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    color: white;
+    z-index: 1;
+}
+
+.plan1::before {
+    content: "Basic";
+    background: #8faecf;
+}
+
+.plan2::before {
+    content: "Most Popular";
+    background: #8faecf;
+}
+
+.plan3::before {
+    content: "Best Value";
+    background: #8faecf;
+}
+
+.plan1:hover::after {
+    content: "🔥Basic";
+    position: relative;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(97, 97, 185);
+    color: white;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
+    border-radius: 4px;
+}
+
+.plan2:hover::after {
+    content: "🔥 Most Popular";
+    position: relative;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(97, 97, 185);
+    color: white;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
+    border-radius: 4px;
+}
+
+.plan3:hover::after {
+    content: "🔥 Best Value!";
+    position: relative;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(97, 97, 185);
+    color: white;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
+    border-radius: 4px;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        position: relative;
+        width: 100%;
+        margin-top: 1rem;
+        opacity: 0.8;
+    }
+
+    .team,
+    .price {
+        flex-direction: column;
+        align-items: center;
+    }
+}
